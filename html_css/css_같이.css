@@ -1,0 +1,91 @@
+body{
+  background-color:  lightcyan;
+}
+
+.container{
+  background-color: white;
+  width: 400px;
+  margin: 30px auto;
+  padding: 40px;
+  font-size: 14px;
+}
+
+.title-div{
+  margin-bottom: 30px;
+}
+
+.title-div > p{
+  font-size: 0.7rem;
+}
+
+.id-div{
+  display: flex;
+  gap: 10px;
+
+}
+
+.id-div input{
+  width: 70%;
+}
+
+.id-div button{
+  width: 30%;
+}
+
+input, select{
+  padding:8px 4px;
+  border: 1px solid lightgray;
+  border-radius: 3px;
+  width: 100%;
+  
+}
+/* input 태그는 클릭하면 border가 바뀌는 게 아니라
+outline이 생기는 거임 */
+/* outline은 주변 요소에 영향을 주지 않음 */
+input:focus, select:focus{
+  /* border: 3px solid red; */
+  outline: 1px solid gray;
+ 
+}
+.form-div p{
+  font-weight: bold;
+  font-size: 0.8rem;
+  margin-bottom: 3px;
+}
+.form-div > div{
+  margin: 12px;
+}
+.addr-div{
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.birthday-div{
+  display: flex;
+  gap: 16px;
+}
+
+.btn{
+  border: none;
+  color: white;
+  font: 0.7rem;
+  padding: 7px 18px;
+  border-radius: 4px;
+  box-shadow: 1px 1px 3px 2px lightgray;
+}
+
+.btn-blue{
+  background-color: lightblue;
+}
+
+.btn-yellow{
+  background-color: yellow;
+}
+.btn-div{
+ display: flex;
+ 
+ justify-content: center;
+ gap: 12px;
+}
+
+/* scale : 1.2; <<이미지 확대(호버랑 같이 쓰면) */

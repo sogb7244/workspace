@@ -1,0 +1,33 @@
+.container{
+  display: flex;
+  flex-direction: row;
+  /* 100vh : 웹 브라우저의 세로 크기 */
+
+  height: 100px;
+  width: 100% ;
+  background-color: rgb(0, 0, 0);
+  color: aliceblue;
+ justify-content: space-between ;
+
+
+}
+
+.header{
+  display: flex;
+  flex-direction: row;
+  width: 50%;
+background-color: rgb(0, 0, 0);
+  line-height: 100px;
+justify-content: space-around   ;
+gap: 6px;
+}
+
+.footer{
+  display: flex;
+  flex-direction: row;
+  line-height: 100px;
+ justify-content: space-between;
+  width: 50%;
+
+
+}

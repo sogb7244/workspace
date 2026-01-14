@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .container{
+    
+      width: 700px;
+      margin: auto;
+
+    }
+    
+    table{
+      border: 1px solid black;
+      border-collapse: collapse;
+      width: 100%;
+    }
+    tr{
+    border: 1px solid black;
+    }
+    td{
+     border: 1px solid black;
+     
+    
+    }
+    
+  .btn-div{
+    text-align: center; /* left center right */
+    margin-top: 20px;
+  }
+  .title-td{
+    text-align: center;
+    background-color: skyblue;
+  }
+  .red{
+    color: red;
+
+  }
+  .center{
+    text-align: center;
+    width: 20%;
+  
+  }
+ 
+  </style>
+</head>
+<body>
+  <div class="container">
+  <!-- 테이블 영역 -->
+ <div class="table-div">
+  <table>
+   <tbody>
+    <tr>
+      <td colspan="2" class="title-td"><span><span class="red"><i>(*필수입력)</i></span>회원 기본 정보</span></td>
+    </tr>
+    <tr>
+      <td class="center"><span>
+        <span class="red">*</span>아이디:</span></td>
+      <td>
+          <input type="text" placeholder="4~12글자">
+          <button type="button">아이디 검사</button>
+      </td>
+    </tr>
+    <tr>
+      <td class="center"><span><span class="red">*</span class="red">비밀번호:</span></td>
+      <td><input type="text"> <span>4~12글자</span></td>
+    </tr>
+    <tr>
+      <td class="center"><span><span class="red">*</span>비밀번호확인:</span>
+      </td>
+      <td><input type="text"> <button type="button">비밀번호 확인</button>
+      </td>
+
+    </tr>
+   </tbody>
+  </table>
+ </div>
+  <!-- 버튼 영역 -->
+
+ <div class="btn-div">
+  <input type="button" value="회원 가입">
+  <input type="button" value="다시 입력">
+
+
+ </div>
+  </div>
+
+  
+</body>
+</html>

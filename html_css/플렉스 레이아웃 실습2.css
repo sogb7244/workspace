@@ -1,0 +1,46 @@
+.container{
+  border: 3px solid black;
+  display: flex;
+width: 700px;
+height: 600px;
+flex-direction:column;
+
+
+
+}
+
+.header{
+border: 2px solid greenyellow;
+display: flex;
+flex-direction: row;
+
+}
+
+.header > div:first-child{
+  border: 3px solid red;
+  width: 60% ;
+}
+.header > div:last-child{
+  border: 3px solid aqua;
+  width: 40%;
+}
+
+.body{
+  border: 3px solid red;
+  display: flex;
+  flex-direction: row;
+  height: 80%;
+
+}
+.body > div:first-child{
+  border: 3px solid chocolate;
+  width: 20%;
+}
+.body > div:last-child{
+  border: 3px solid chocolate;
+  width: 80%;
+}
+
+.tail{
+  display: flex;
+flex-direction: row;}

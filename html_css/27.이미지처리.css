@@ -1,0 +1,27 @@
+div{
+  border: 5px solid black;
+  margin: 50px;
+  width: 500px;
+  height: 600px;
+}
+
+img{
+  display: block;
+  height: 100%;
+  width: 100%;
+
+}
+
+.img1{
+  /* 비율 유지한채 이미지가 짤리지 않는 선에서 영역을 채움 */
+  object-fit: contain;
+}
+.img2{
+  /* 비율 유지한채  짤리더라도 이미지를 영역에 채움 */
+  object-fit:  cover;
+  /* 앞: 좌우정렬 뒤: 상하정렬 */
+  /* 좌우 : left center right 10% 20% 30%... */
+  /* 상하 : top center bottom 10% 20% 30%... */
+  /* dafault : center center */
+  object-position: right bottom;
+}

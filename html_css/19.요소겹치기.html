@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <style>
+    .img-div{
+      position: relative;
+      width: 600px;
+    }
+
+    .heart-span{
+position: absolute;
+top: 16px;
+right: 16px;
+
+    }
+    
+    img{
+      width: 100%;
+    }
+    
+  </style>
+
+</head>
+<body>
+  <h2>요소 겹치기</h2>
+  <p>
+    이미지와 하트 아이콘을 겹쳐보세요
+  </p>
+  <p>
+    이미지와 하트 아이콘을 겹쳐보세요
+  </p>
+  <p>부모태그에 position : relative를 주면, 좌표의 기준이 부모태그로 바뀐다.</p>
+<div class="img-div">
+  
+   
+      <span class="heart-span"><i class="bi bi-heart"></i></span>
+    <img src="house.jpg">
+  </div>
+  </body>
+
+</html>

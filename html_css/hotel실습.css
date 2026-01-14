@@ -1,0 +1,53 @@
+body{
+  background-color: #e0ffff;
+
+}
+.container{
+  display: flex;
+  flex-direction: column;
+  width: 380px;
+  height: 500px;
+  margin: 10px auto ;
+  border-radius: 10px;
+  border: 1px solid lightgray;
+  background-color: white;
+ 
+  
+ 
+}
+
+.head{
+  overflow: hidden;
+ border-top-right-radius: 10px;
+ border-top-left-radius: 10px;
+
+}
+.box1{
+  padding:  5px;
+}
+.box2{
+  padding: 0px 10px;
+}
+
+.box2lo{
+  padding: 10px;
+ display: flex;
+ justify-content: space-evenly;
+}
+
+.box3{
+ padding: 10px; 
+}
+
+.box3-call{
+  display: flex;
+  padding: 15px 10px 0px 0px;
+  gap: 10px;
+
+ }
+.button{
+ 
+}
+
+
+

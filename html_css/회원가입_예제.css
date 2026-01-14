@@ -1,0 +1,63 @@
+body{
+  background-color: #e9d6d6;
+  height: 100vh;
+   display: flex;
+  align-items: center;
+  justify-content: center;
+ 
+}
+
+.container{
+  background-color: white;
+  width: 300px;
+
+margin: 40px 0px;
+border-radius: 8px;
+box-shadow:1px 1px 6px 4px #333333;
+padding: 40px 20px 8px 20px;
+}
+/* 속성 선택자 */
+/* type이 text인 input 태그만 선택 */
+input[type="text"],
+input[type="password"]{
+  width: 100%;
+  padding: 8px 4px;
+  border: 1px solid lightgray;
+}
+
+/* input 태그에서 type이 checkbox인 것 제외하고 전부 다 */
+input:no([type="check"]){
+
+
+}
+.form > div{
+  margin-bottom: 12px;
+}
+.info{
+  font-size: 0.7rem;
+}
+
+.chk-div{
+  display: flex;
+  align-items: center;
+}
+
+.btn{
+  background-color: #4285f4;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  width: 100%;
+  padding: 10px;
+
+}
+
+.link{
+  text-align: center;
+  margin-top: 10px;
+  font-size: 0.8rem;
+}
+a{
+  text-decoration: none;
+  color: blue;
+}

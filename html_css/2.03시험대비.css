@@ -1,0 +1,48 @@
+.container{
+  margin: 0px 50px;
+  height: 100%;
+
+}
+.container > :first-child{
+  display: flex;
+  margin: 0px 10%;
+  justify-content: space-evenly;
+  align-content: center;
+  height: 10%;
+  border: 1px solid black;
+  padding: 20px;
+  
+}
+.header-menu{
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  
+ 
+}
+.header-menu > p{
+ 
+}
+.picture{
+  width: 100%;
+  height: 20%;
+  object-fit: cover;
+  object-position: ;
+  position: relative;
+}
+.intro{
+  position: absolute;
+  top: 0px;
+  margin:auto;
+  display: flex;
+  flex-direction: column;
+}
+button{
+  border: none;
+  background-color: orange;
+  color: white;
+  padding: 5px 15px;
+  margin: auto;
+  
+
+}
