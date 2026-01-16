@@ -1,0 +1,16 @@
+.test4_container{
+  display: flex;
+  gap: 10px;
+
+}
+
+.test4_container > div{
+width : 100px;
+height : 100px;
+background-color:rgb(73, 6, 18);
+color: white;
+text-align: center;
+line-height: 100px;
+font-size: 2rem;
+
+}
