@@ -1,11 +1,10 @@
 package com.green.basic_board.controller;
 
 import com.green.basic_board.dto.BoardDTO;
+import com.green.basic_board.mapper.BoardMapper;
 import com.green.basic_board.service.BoardService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -44,7 +43,21 @@ public class BoardController {
     dto.setReadCnt(10);
    List<BoardDTO> result = boardService.runTest4(dto);
    return result;
-
+}
+@PostMapping("/test5")
+public void regBoard(@RequestBody BoardDTO boardDTO){
+  System.out.println(boardDTO);
+  boardService.regBoard(boardDTO);
+}
+@DeleteMapping("/test6/{boardNum}")
+public int regDelete(@PathVariable("boardNum")int boardNum){
+    int result = boardService.regDelete(boardNum);
+    return result;
+}
+@PutMapping("/test7/{boardNum}")
+public void regUpdate(@PathVariable("boardNum")int boardNum,@RequestBody BoardDTO boardDTO){
+  boardDTO.setBoardNum(boardNum);
+  boardService.regUpdate(boardDTO);
 }
 
 }

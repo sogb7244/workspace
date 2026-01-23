@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 해당 파일에 모든 쿼리문을 작성 -->
+<!-- namespace에는 xml파일과 연결할 Mapper interface 파일명을 패키지를 포함하여 적어주세요 -->
+<mapper namespace="com.green.item.mapper.ItemMapper">
+        <resultMap id="item" type="com.green.item.dto.ItemDTO">
+            <id column="ITEM_NUM" property="itemNum" />
+            <result column="ITEM_NAME" property="itemName" />
+            <result column="ITEM_PRICE" property="itemPrice" />
+            <result column="REG_DATE" property="regDate" />
+            <result column="ITEM_INTRO" property="itemIntro" />
+
+
+        </resultMap>
+
+<insert id="insertItem">
+    INSERT INTO ITEM(
+      ITEM_NAME
+    , ITEM_PRICE
+    , ITEM_INTRO
+    ) VALUES (
+    #{itemName}
+    ,#{itemPrice}
+    ,#{itemIntro}
+    )
+</insert>
+
+    <!--조회한 데이터 중 하나의행 데이터를 가져올 자료형-->
+    <select id="selectItemList" resultMap="item">
+        SELECT ITEM_NUM
+            , ITEM_NAME
+            , ITEM_PRICE
+            , REG_DATE
+        FROM ITEM
+        ORDER BY REG_DATE DESC
+    </select>
+
+    <select id="selectItemInfo" resultMap="item">
+        SELECT ITEM_NUM
+            , ITEM_NUM
+            , ITEM_NAME
+            , ITEM_PRICE
+            , REG_DATE
+            , ITEM_INTRO
+        FROM ITEM
+
+    </select>
+
+
+
+
+
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

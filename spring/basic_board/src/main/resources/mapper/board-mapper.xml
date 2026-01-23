@@ -44,6 +44,32 @@
         AND READ_CNT &lt; #{readCnt}
     </select>
 
+    <insert id="insertBoard">
+        INSERT INTO BASIC_BOARD (
+            TITLE
+            , WRITER
+            , CONTENT
+        ) VALUES (
+         #{title}
+        , #{writer}
+        , #{content}
+        )
+    </insert>
+
+    <!-- 컨트롤 쉬프트 슬러시( 라인맞춰서 주석)-->
+    <!--하나의 게시글을 삭제하는 쿼리 작성 및 기능 구현, 실행은 postman에서!-->
+    <delete id="deleteBoard">
+        DELETE FROM BASIC_BOARD
+        WHERE BOARD_NUM = #{boardNum}
+    </delete>
+
+    <update id="updateBoard">
+        UPDATE BASIC_BOARD
+        SET
+            TITLE = #{title}
+          , CONTENT = #{content}
+        WHERE BOARD_NUM = #{boardNum}
+    </update>
 </mapper>
 
 
