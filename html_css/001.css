@@ -1,0 +1,30 @@
+.container {
+  border: 1px solid black;
+  height: 100%;
+  width: 100%;
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+  gap:50px
+}
+.header{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 10px;
+}
+
+.mid{
+  display: flex;
+  flex-direction: column;
+  
+}
+.mid > div{
+  display: flex;
+  justify-content: space-between;
+}
+td{
+border: 1px solid black;
+padding: 5px;
+
+}

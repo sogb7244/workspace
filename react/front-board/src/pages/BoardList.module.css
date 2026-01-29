@@ -1,0 +1,51 @@
+.container{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  text-align: center;
+}
+.searchDiv{
+  display: flex;
+  justify-content: end;
+  padding: 10px 0px;
+  gap: 5px;
+  font-size: 5px;
+}
+
+table{
+
+  width: 100%;
+  border: 1px solid white;
+  background-color: aqua;
+}
+thead{
+  background-color: rgb(0, 153, 255);
+  height: 30px;
+  text-align: center;
+}
+tbody>tr>td:nth-child(2){
+  text-align: left;
+}
+
+td{
+  border: 1px solid white;
+}
+tbody > tr:nth-child(even){
+  background-color: rgba(200, 200, 200, 0.5);
+}
+tbody > tr:hover{
+  background-color: rgba(200, 100, 200, 1);
+}
+thead > tr{
+
+  font-weight: bold;
+}
+
+
+button {
+  background-color: blue;
+  color: white;
+}
+.btnbottom{
+  padding: 10px;
+}

@@ -1,6 +1,9 @@
 import ItemDetail from "./ItemDetail"
 import ItemForm from "./ItemForm"
 import ItemList from "./ItemList"
+import Parent from "./Parent"
+import Test6 from "./Test6"
+import UpdateForm from "./UpdateForm"
 
 
 function App() {
@@ -12,9 +15,10 @@ function App() {
 
      {/* <ItemForm /> */}
    {/* <ItemList/> */}
-
-   {<ItemDetail />}
-    
+   {/* {<ItemDetail />} */}
+    {/* <UpdateForm />     */}
+    {/* <Parent /> */}
+    <Test6 />
     </>
   )
 }

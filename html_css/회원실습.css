@@ -15,7 +15,7 @@ width: 80%;
   width: 80px;
   border-radius: 5px;
   text-align: center;
-  margin: 0px auto; //
+  margin: 0px auto; 
   padding: 4px 0px;
   
 }
@@ -54,7 +54,8 @@ width: 80%;
   gap: 10px;
   /* 투명도, 선명도 */
   opacity: 0;
-  transition: all; 0.5s;
+  transition: all; 
+  scale: 5s;
   }
   .intro:hover{
     opacity: 1;

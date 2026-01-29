@@ -27,4 +27,23 @@ public class ItemController {
       List<ItemDTO> lst = itemService.getItemList();
       return lst;
   }
+  //상품 상세 정보 조회 api
+  //(GET)
+  @GetMapping("/{itemNum}")
+  public ItemDTO getDetail(@PathVariable("itemNum")int itemNum){
+      ItemDTO result = itemService.getDetail(itemNum);
+    System.out.println(result);
+      return result;
+  }
+  //상품 정보 수정
+  @PutMapping("/{itemNum}")
+  public void update(@PathVariable("itemNum")int itemNum, @RequestBody ItemDTO itemDTO){
+    System.out.println(itemNum);
+    System.out.println(itemDTO);
+    itemService.updateDate(itemDTO);
+  }
+  @DeleteMapping("/{itemNum}")
+  public void deleteItem(@PathVariable("itemNum")int itemNum){
+      itemService.deleteItem(itemNum);
+  }
 }

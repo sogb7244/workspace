@@ -36,17 +36,30 @@
         ORDER BY REG_DATE DESC
     </select>
 
-    <select id="selectItemInfo" resultMap="item">
+    <select id="selectItem" resultMap="item">
         SELECT ITEM_NUM
-            , ITEM_NUM
             , ITEM_NAME
             , ITEM_PRICE
             , REG_DATE
             , ITEM_INTRO
         FROM ITEM
-
+        WHERE ITEM_NUM = #{itemNum}
     </select>
 
+    <update id="updateitem">
+        UPDATE ITEM
+        SET ITEM_NAME = #{itemName}
+            , ITEM_PRICE = #{itemPrice}
+        WHERE ITEM_NUM = #{itemNum}
+    </update>
+
+    <delete id="deleteItem">
+        DELETE FROM ITEM
+        WHERE ITEM_NUM = #{itemNum}
+
+
+
+    </delete>
 
 
 
