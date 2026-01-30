@@ -46,8 +46,23 @@ public class BoardService {
 //    int insertRowCnt = boardMapper.insertBoardList(boardDTO);
 //  }// insert 쿼리결과 리턴되는 데이터는 새롭게 추가된 행의 갯수
 //  return insertRowCnt;
-public BoardDTO getBoardDetail(int boardNum){
- BoardDTO getDetail =  boardMapper.getBoardDetail(boardNum);
-  return getDetail;
-}
+public BoardDTO getBoardDetail(int boardNum, String type){
+    //게시글 조회 수 증가 쿼리 실행
+  //상세 조회 기능에서만 조회수를 1증가
+  if (type.equals("get")){
+    boardMapper.updateReadCnt(boardNum);
+  }
+  //게시글 상세 정보 출력 쿼리 실행
+   BoardDTO getDetail = boardMapper.getBoardDetail(boardNum);
+    return getDetail;
+  }
+
+  //삭제 기능
+  public void deleteDetail(int boardNum){
+    boardMapper.deleteDetail(boardNum);
+  }
+  //게시글 수정 기능
+  public void updateBoard(BoardDTO boardDTO){
+    boardMapper.updateBoard(boardDTO);
+  }
 }

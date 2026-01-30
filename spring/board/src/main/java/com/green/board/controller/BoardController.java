@@ -40,10 +40,30 @@ public class BoardController {
     boardService.insertBoard(boardDTO);
     System.out.println(boardDTO);
   }
-  //(GET) localhost:8080/{boardNum}
-@GetMapping("/{boardNum}")
-  public BoardDTO getDetailList(@PathVariable("boardNum") int boardNum){
-    BoardDTO result = boardService.getBoardDetail(boardNum);
-    return result;
+  //(GET) localhost:8080/boards/get/1 -> 게시글 상세조회
+  //(GET) localhost:8080/boards/update/1 -> 수정하기 위한 조회
+@GetMapping("/{type}/{boardNum}")
+  public BoardDTO getDetailList(@PathVariable("boardNum") int boardNum,
+                                @PathVariable("type")String type){
+    //type = 'get' : 상세조회, type = 'update' : 수정 페이지어서 조회
+
+    return boardService.getBoardDetail(boardNum, type);
   }
+
+  //게시글 삭제 api
+@DeleteMapping("/{boardNum}")
+  public void delete(@PathVariable("boardNum")int boardNum){
+    boardService.deleteDetail(boardNum);
+}
+  //게시글 수정 api
+  //(PUT) localhost:8080/boards/1
+@PutMapping("/{boardNum}")
+  public void updateBoard(@PathVariable("boardNum")int boardNum,@RequestBody BoardDTO boardDTO){
+  System.out.println(boardNum);
+    System.out.println(boardDTO);
+    //boardDTO 에 boardNum을 채워줘야함
+    boardDTO.setBoardNum(boardNum);
+    boardService.updateBoard(boardDTO);
+}
+
 }

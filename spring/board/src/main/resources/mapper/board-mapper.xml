@@ -50,6 +50,25 @@
         FROM BASIC_BOARD
         WHERE BOARD_NUM = #{boardNum}
     </select>
+    <update id="updateReadCnt">
+        UPDATE BASIC_BOARD
+        SET
+             READ_CNT = READ_CNT + 1
+        WHERE BOARD_NUM = #{boardNum}
+    </update>
+    <!--게시글 삭제 쿼리-->
+    <delete id="deleteDetail">
+        DELETE FROM BASIC_BOARD
+        WHERE BOARD_NUM = #{boardNum}
+    </delete>
+    <!--게시글 정보 수정 쿼리-->
+    <update id="updateBoard">
+        UPDATE BASIC_BOARD
+        SET
+            TITLE = #{title}
+           , CONTENT = #{content}
+        WHERE BOARD_NUM = #{boardNum}
+    </update>
 </mapper>
 
 

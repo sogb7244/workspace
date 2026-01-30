@@ -64,6 +64,7 @@ const RegForm = () => {
               alert('제목과 작성자는 필수입력입니다');
               return;//리턴 데이터는 없다 -> 실행 시 함수 종료
             }
+            else
             axios
             .post('http://localhost:8080/boards',data)
             .then(response =>{

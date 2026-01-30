@@ -73,7 +73,7 @@ WHERE EMPNO >= 1005;
 #3.EMP 테이블에서 직급이 대리이거나 과장인 사원들의 
 #  사원명, 직급, 급여를 조회하시오.
 SELECT ENAME, JOB, SAL
-FROME emp
+FROM emp
 WHERE JOB = '대리' OR JOB = '과장';
 
 #4.EMP 테이블에서 급여가 300 이상이면서 커미션이 300 이상인 사원들의 

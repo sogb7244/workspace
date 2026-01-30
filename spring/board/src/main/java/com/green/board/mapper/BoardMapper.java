@@ -26,4 +26,10 @@ public interface BoardMapper {
   //등록되면 1개가 등록되므로 int(영향받은 행의 갯수)
   void insertBoardList(BoardDTO boardDTO);
   BoardDTO getBoardDetail(int boardNum);
+  //조회수 증가 쿼리 실행 메서드
+  void updateReadCnt(int boardNum);
+  //삭제 쿼리 실행 메서드
+  void deleteDetail(int boardNum);
+  //게시글 수정 쿼리
+  void updateBoard(BoardDTO boardDTO);
 }
