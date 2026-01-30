@@ -33,6 +33,7 @@ public class ItemController {
        }
      }
      return result;
+     //num 매개변수로 받아서 itemList e객체에
    }
    @DeleteMapping("/{delNum}")
    public List<ItemDTO> deleteItem(@PathVariable("delNum") int delNum){

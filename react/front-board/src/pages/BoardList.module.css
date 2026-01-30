@@ -12,30 +12,30 @@
   font-size: 5px;
 }
 
-.tables{
+table{
   width: 100%;
   border: 1px solid rgb(68, 31, 31);
-  background-color: aqua;
+  background-color: rgb(177, 199, 199);
 }
 .table thead{
   background-color: rgb(0, 153, 255);
   height: 30px;
   text-align: center;
 }
-table >tr>td:nth-child(2){
+.table >tr>td:nth-child(2){
   text-align: left;
 }
 
-td{
+table td{
   border: 1px solid white;
 }
-table tbody > tr:nth-child(even){
+.table tbody > tr:nth-child(even){
   background-color: rgba(200, 200, 200, 0.5);
 }
-table tbody > tr:hover{
+.table tbody > tr:hover{
   background-color: rgba(200, 100, 200, 1);
 }
-thead > tr{
+.table thead > tr{
 
   font-weight: bold;
 }

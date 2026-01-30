@@ -85,9 +85,16 @@ public class BoardController {
   public List<BoardDTO> deleteBoard(@PathVariable("boardNum")int boardNum){
     System.out.println(boardNum);
 
-    for(int i = 0;i<boardList.size() ; i++){
-      if(boardList.get(i).getBoardNum() == boardNum){
-        boardList.remove(i);
+//    for(int i = 0;i<boardList.size() ; i++){
+//      if(boardList.get(i).getBoardNum() == boardNum){
+//        boardList.remove(i);
+//
+//
+//      }
+//    }
+    for(BoardDTO e : boardList){
+      if(e.getBoardNum() == boardNum){
+        boardList.remove(e);
       }
     }
     return boardList;

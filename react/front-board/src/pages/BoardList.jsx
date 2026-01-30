@@ -42,7 +42,7 @@ const BoardList = () => {
           
         >검색</button>
       </div>
-      <table className='tables' >
+      <table className={styles.table} >
         {/* 테이블의 각 컬럼 너비값 지정 */}
         <colgroup>
           <col width='10%'/>
