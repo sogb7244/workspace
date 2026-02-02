@@ -9,6 +9,5 @@ public class Array_2실습2 {
     for (int i =0; i <arr1.length; i++){
       System.out.println(newarr[i]);
     }
-
   }
 }

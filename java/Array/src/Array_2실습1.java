@@ -1,3 +1,5 @@
+import com.sun.tools.javac.Main;
+
 import java.util.Scanner;
 
 public class Array_2실습1 {
@@ -25,3 +27,4 @@ public class Array_2실습1 {
 
   }
 }
+

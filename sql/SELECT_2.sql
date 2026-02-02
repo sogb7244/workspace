@@ -125,7 +125,7 @@ AND TITLE NOT LIKE '혼자%';
 
 #3. 저자가 '이데이터'이거나 '김철수'인 도서 중, 2021년 이후에 출판된 도서의 제목, 저자, 출판일을 조회하시오.
 #  (단, 출판일 기준 내림차순 정렬)
-SELECT TITLE, AUTHOR. PUB_DATE
+SELECT TITLE, AUTHOR, PUB_DATE
 FROM books
 WHERE AUTHOR IN ('이데이터', '김철수')
 AND YEAR(PUB_DATE) >= 2021

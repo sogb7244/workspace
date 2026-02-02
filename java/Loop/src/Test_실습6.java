@@ -16,6 +16,7 @@ public class Test_실습6 {
          break;//가장 가까운 반복문 벗어남.
        }
       }
+
       }
       if(cnt == 2){
         System.out.println(i);
