@@ -98,6 +98,7 @@
 }
 .templateDiv > :first-child > img {
  width: 20%;
+ margin-top: 10px;
 }
 .templateDiv > :last-child {
   display: flex;
@@ -131,14 +132,16 @@
   font-size: 10px;
 }
 .lastestblogposts{
-  margin-top: 50px;
+  margin : 20px, 0px;
   text-align: center;
   height: 10%;
 }
 .lastestblogposts > img{
   width: 20%;
+  margin-top: 10px;
 }
 .blog{
+
   display: flex;
   flex-direction: row;
   gap: 15px;

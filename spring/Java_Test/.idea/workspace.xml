@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="6ef3a8d9-da27-47fb-a1e8-f4970157aabe" name="변경" comment="">
+      <change afterPath="$PROJECT_DIR$/../../04. 데이터베이스 Part4.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/.idea/java.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/Array/src/MainTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/Array/src/MainTest2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/out/production/Array/Array_1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/out/production/Array/Array_2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/out/production/Array/Array_2실습1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/out/production/Array/Array_2실습11.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/out/production/Array/Array_2실습2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/out/production/Array/Array_2실습3.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/out/production/Array/Array_2실습4.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/out/production/Array/Array_2실습5.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/out/production/Array/Array_2실습6.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/out/production/Array/Array_2실습7.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/out/production/Array/Array_3.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/out/production/Array/Array_4.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/out/production/Array/Array_5.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/out/production/Array/Array_6.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/out/production/Array/Array_7.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/out/production/Array/Array_강의4.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/out/production/Array/Array_실습10.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/out/production/Array/Array_실습11.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/out/production/Array/Array_실습_9.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/out/production/Array/MainTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/out/production/Array/MainTest2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/out/production/Array/Method_1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../react/front-board/public/face-03.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../react/front-board/src/components/ReplyInfo.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../react/front-board/src/pages/Test1.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../react/front-board/src/pages/Test2.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/MemberTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/Test1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/Test2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../board/src/main/java/com/green/board/controller/ReplyController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../board/src/main/java/com/green/board/dto/ReplyDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../board/src/main/java/com/green/board/dto/SearchDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../board/src/main/java/com/green/board/mapper/ReplyMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../board/src/main/java/com/green/board/service/ReplyService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../board/src/main/resources/mapper/reply-mapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../sql/INNER JOIN 예제1.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../sql/INNER JOIN 예제2.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../디비연결자료/application_properties.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../디비연결자료/log4jdbc.log4j2.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../디비연결자료/logback.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../디비연결자료/mapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../react/front-board/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../react/front-board/src/App.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../react/front-board/src/pages/BoardDetail.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../react/front-board/src/pages/BoardDetail.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../react/front-board/src/pages/BoardList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../react/front-board/src/pages/BoardList.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../board/src/main/java/com/green/board/controller/BoardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../board/src/main/java/com/green/board/controller/BoardController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../board/src/main/java/com/green/board/mapper/BoardMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/../board/src/main/java/com/green/board/mapper/BoardMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../board/src/main/java/com/green/board/service/BoardService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../board/src/main/java/com/green/board/service/BoardService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../board/src/main/resources/mapper/board-mapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../board/src/main/resources/mapper/board-mapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../sql/DISTINCT, 함수-1.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../../sql/DISTINCT, 함수-1.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../sql/INNER JOIN.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../../sql/INNER JOIN.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../sql/집계함수,GROUP BY,HAVING.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../../sql/집계함수,GROUP BY,HAVING.sql" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 8
+}]]></component>
+  <component name="ProjectId" id="398UEdyprw38Pzh12IifsDwnvUG" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "main",
+    "junie.onboarding.icon.badge.shown": "true",
+    "kotlin-language-version-configured": "true",
+    "project.structure.last.edited": "모듈",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "to.speed.mode.migration.done": "true",
+    "애플리케이션.Test1.executor": "Run",
+    "애플리케이션.Test2.executor": "Run",
+    "애플리케이션.Test3.executor": "Run",
+    "애플리케이션.Test5.executor": "Run"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-30f59d01ecdd-cffe25b9f5b3-intellij.indexing.shared.core-IU-253.28294.334" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="디폴트 작업">
+      <changelist id="6ef3a8d9-da27-47fb-a1e8-f4970157aabe" name="변경" comment="" />
+      <created>1770077082708</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1770077082708</updated>
+    </task>
+    <servers />
+  </component>
+</project>

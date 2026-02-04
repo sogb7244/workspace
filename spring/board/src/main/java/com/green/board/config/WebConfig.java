@@ -1,4 +1,3 @@
-//내용다지우고 메모장 전체 복붙
 package com.green.board.config;
 
 import org.springframework.context.annotation.Configuration;

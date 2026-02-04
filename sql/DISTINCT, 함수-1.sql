@@ -26,7 +26,7 @@ SELECT TRUNCATE(123.456, 1)
 # MOD연산자(나머지 연산)
 SELECT MOD(10, 4); #2
 
-#EMP 테이블에서 사번이 짝수인 사원의 모든 정보를 조회
+#EMP 테이블에서 사번이 짝수인 사원의 모든 정보를 조회FIF
 SELECT * FROM EMP
 WHERE MOD(EMPNO, 2) = 0
 

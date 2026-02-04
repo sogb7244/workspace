@@ -22,6 +22,7 @@ public class ItemController {
    }
    @GetMapping("")
    public List<ItemDTO> getItemList(){
+
      return itemList;
    }
    @GetMapping("/{num}")
