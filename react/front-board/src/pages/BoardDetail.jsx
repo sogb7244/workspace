@@ -2,6 +2,7 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom';
 import ReplyInfo from '../components/ReplyInfo';
+import { delBoard } from '../api/boardApi';
 
 const BoardDetail = () => {
   const nav = useNavigate();
@@ -24,23 +25,20 @@ const BoardDetail = () => {
   }, []);
 
   //게시글 삭제 함수
-  const deleteBoard = () => {
+  const deleteBoard = async () => {
     //comfirm() -> 확인, 취소 버튼이 따라 리턴값 결정. 확인 -> true, 취소 -> false
     const result = confirm('정말 삭제할까요?');
 
     //확인 눌렀을 경우...
     if(result){
-      axios.delete(`http://localhost:8080/boards/${params.boardNum}`)
-      .then(response => {
-        if(response.data === 1){
+      const response = await delBoard (params.boardNum);
+       if(response.data === 1){
           alert('삭제되었습니다');
           nav('/');
-        }
-        else{
+       }
+       else{
           alert('오류 발생!!!!');
-        }
-      })
-      .catch(e => console.log(e));
+       }
     }
   }
 

@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom';
+import { saveOne } from '../api/boardApi';
 
 const RegForm = () => {
   const nav = useNavigate();
@@ -30,18 +31,14 @@ const RegForm = () => {
       return;//리턴 데이터는 없다 -> 실행 시 함수 종료하겠다는 의미
     }
 
-    axios.post('http://localhost:8080/boards', boardData)
-    .then(response => {
-      if(response.status === 201){
+    const response = saveOne(boardData);
+    if(response.status === 201){
         alert('새로운 게시글이  등록되었습니다');
         nav('/');
-      }
-      else{
+    }
+    else{
         alert('알수 없는 이유로 등록에 실패했습니다');
-      }
-      
-    })
-    .catch(e => console.log(e));
+    }
   }
 
   return (

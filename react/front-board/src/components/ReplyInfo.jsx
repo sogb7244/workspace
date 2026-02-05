@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
+import { getList, save, delReply } from '../api/replyApi';
 
 const ReplyInfo = ({boardNum}) => {
   //댓글 목록 조회 데이터를 저장할 state 변수
@@ -12,15 +13,14 @@ const ReplyInfo = ({boardNum}) => {
     content : '',
     writer : ''
   });
-  const deleteReply =(replyNum) => {
+  const deleteReply =async (replyNum) => {
     const result = confirm('삭제하겠습니까?')
     if(result){
-      axios.delete(`http://localhost:8080/replies/${replyNum}`)
-    .then(response => {
-      //댓글 다시 조회
+      //댓글 삭제
+      await delReply(replyNum);
+
+       //댓글 다시 조회
       getReplyList();
-    })
-    .catch(e => console.log(e));
     }
   }
 
@@ -36,35 +36,31 @@ const ReplyInfo = ({boardNum}) => {
   useEffect(() => {
    getReplyList();
   } , []);
+
   //댓글 목록 조회 함수
-  const getReplyList = () => {
-     axios.get(`http://localhost:8080/replies/${boardNum}`)
-    .then(response => {
-      console.log(response.data);
-      setReplyList(response.data);//state변경함수는 다시그려줌
-    })
-    .catch(e => console.log(e));
+  const getReplyList = async() => {
+      const response = await getList(boardNum);
+      setReplyList(response.data);
   }
+ 
   //댓글 등록 api 호출 메서드
-  const regReply = () => {
+  const regReply = async() => {
   //작성자 혹은 댓글 내용이 입력되지 않았으면..
     if(replyData.writer === '' || replyData.content === '') {
       alert('작성자 및 내용은 필수입력입니다.');
       return;
     }
-
-    axios.post('http://localhost:8080/replies',replyData)
-    .then(response => {
-      getReplyList();//댓글 목록 조회
+    //댓글등록
+    await save(replyData);
+    //댓글 목록 조회
       //input 태그 초기화
       setreplyData({
-        ...regReply,
+        ...replyData,
         writer : '',
         content : ''
       })
-    })
-    .catch(e => {console.log(e)})
-
+      //댓글 등록 
+      getReplyList();
   }
   return (
     <div style={{marginTop : '20px'}}>
