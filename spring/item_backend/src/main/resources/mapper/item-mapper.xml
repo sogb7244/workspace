@@ -13,7 +13,7 @@
         <result column="ITEM_REGDATE" property="itemRegDate"/>
     </resultMap>
     
-    <select id="List" resultMap="itemMember">
+    <select id="getItemList" resultMap="itemMember">
         SELECT *
         FROM ITEM_INFO
     </select>

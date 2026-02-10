@@ -6,5 +6,5 @@ import org.apache.ibatis.annotations.Mapper;
 import java.util.List;
 @Mapper
 public interface ItemMapper {
-  List<ItemDTO> List(ItemDTO itemDTO);
+  List<ItemDTO> getItemList(ItemDTO itemDTO);
 }

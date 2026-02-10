@@ -6,6 +6,8 @@ import lombok.Setter;
 import lombok.ToString;
 import org.springframework.format.annotation.DateTimeFormat;
 
+import java.time.LocalDateTime;
+
 @Getter
 @Setter
 @ToString
@@ -15,5 +17,5 @@ public class ItemDTO {
   private int price;
   private String itemRegName;
   private String itemIntro;
-  private DateTimeFormat itemRegDate;
+  private LocalDateTime itemRegDate;
 }

@@ -14,7 +14,7 @@ public class ItemService {
     this.itemMapper = itemMapper;
   }
   public List<ItemDTO> getList(ItemDTO itemDTO){
-    List<ItemDTO> result = itemMapper.List(itemDTO);
+    List<ItemDTO> result = itemMapper.getItemList(itemDTO);
     return result;
   }
 }
