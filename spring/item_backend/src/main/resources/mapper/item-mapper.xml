@@ -9,7 +9,7 @@
         <result column="ITEM_NAME" property="itemName"/>
         <result column="PRICE" property="price"/>
         <result column="ITEM_REGNAME" property="itemRegName"/>
-        <result column="ITEM_ITEMINTRO" property="itemIntro"/>
+        <result column="ITEM_INTRO" property="itemIntro"/>
         <result column="ITEM_REGDATE" property="itemRegDate"/>
     </resultMap>
     
@@ -17,6 +17,36 @@
         SELECT *
         FROM ITEM_INFO
     </select>
+
+    <select id="getDetail" resultMap="itemMember">
+        SELECT *
+        FROM ITEM_INFO
+        WHERE ITEM_NUM = #{itemNum}
+    </select>
+    <update id="updateDetail">
+        UPDATE  ITEM_INFO
+        SET ITEM_NAME = #{itemName}
+            ,ITEM_INTRO = #{itemIntro}
+            ,ITEM_REGNAME = #{itemRegName}
+            ,PRICE = #{price}
+        WHERE ITEM_NUM=#{itemNum}
+    </update>
+    <delete id="deleteDetail">
+        DELETE FROM ITEM_INFO
+        WHERE ITEM_NUM = #{itemNum}
+    </delete>
+    <insert id="insertData"> INSERT INTO ITEM_INFO (
+        ITEM_NAME,
+        PRICE,
+        ITEM_REGNAME,
+        ITEM_INTRO
+    ) VALUES (
+                 #{itemName},
+                 #{price},
+                 #{itemRegName},
+                 #{itemIntro}
+             )
+    </insert>
 </mapper>
 
 
