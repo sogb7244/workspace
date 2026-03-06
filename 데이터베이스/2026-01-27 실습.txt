@@ -1,0 +1,47 @@
+CREATE TABLE BOOK_STORE (
+    BOOK_ID INT PRIMARY KEY,        -- 도서 번호
+    TITLE VARCHAR(100),             -- 도서 제목
+    AUTHOR VARCHAR(50),             -- 저자
+    CATEGORY VARCHAR(20),           -- 카테고리
+    PRICE DECIMAL(10, 2),           -- 가격
+    STOCK INT,                      -- 재고 수량
+    DISCOUNT_RATE DOUBLE            -- 할인율 (예: 0.15는 15%)
+);
+
+INSERT INTO BOOK_STORE VALUES 
+(101, '  Java Programming  ', 'KIM', 'IT', 35000.55, 12, 0.1),
+(102, 'Python Master', 'LEE', 'IT', 28000.40, 5, 0.2),
+(103, 'SQL Beginner', 'PARK', 'DB', 22000.00, 3, NULL),
+(104, 'The Great Gatsby', 'F. Scott', 'NOVEL', 15000.80, 8, 0.05),
+(105, 'Data Science 101', 'CHOI', 'IT', 42000.00, 0, 0.3),
+(106, 'Learning SQL', 'KIM', 'DB', 31000.25, 11, NULL);
+
+
+[Part 1: 중복 제거 및 수치 함수]
+BOOK_STORE 테이블에 있는 카테고리의 종류를 중복 없이 조회하세요.
+
+모든 도서의 가격(PRICE)을 소수점 첫째 자리에서 반올림하여 조회하세요.
+
+도서 번호(BOOK_ID)가 홀수인 도서들의 제목과 저자를 조회하세요.
+
+가격(PRICE)을 소수점 이하를 버리고(FLOOR) '정수가격'이라는 별칭으로 조회하세요.
+
+[Part 2: 문자 함수]
+도서 제목(TITLE)의 좌우 공백을 제거하고, 모두 대문자로 변환하여 조회하세요.
+
+저자(AUTHOR)의 이름이 3글자 이상이라면, 앞의 2글자만 추출하여 조회하세요.
+
+제목(TITLE)에 있는 'SQL'이라는 단어를 'DATABASE'로 교체하여 조회하세요.
+
+저자(AUTHOR) 이름의 오른쪽에 '*'를 채워 총 5글자로 만드세요. (예: KIM -> KIM**)
+
+[Part 3: 논리 및 NULL 처리]
+DISCOUNT_RATE(할인율)가 NULL인 경우 0으로 표시하고, '할인율'이라는 별칭으로 조회하세요.
+
+IF 함수를 사용하여 재고(STOCK)가 0이면 '품절', 아니면 **'판매중'**이라고 표시되는 컬럼을 추가하세요.
+
+CASE 문을 사용하여 카테고리별 위치를 출력하세요.
+IT -> 1층 로비
+DB -> 2층 사무실
+NOVEL -> 3층 서고
+그 외 -> 기타

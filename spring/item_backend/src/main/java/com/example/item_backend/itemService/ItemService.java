@@ -14,7 +14,20 @@ public class ItemService {
     this.itemMapper = itemMapper;
   }
   public List<ItemDTO> getList(ItemDTO itemDTO){
-    List<ItemDTO> result = itemMapper.List(itemDTO);
+    List<ItemDTO> result = itemMapper.getItemList(itemDTO);
     return result;
+  }
+  public ItemDTO getDetail(Integer num){
+    ItemDTO result = itemMapper.getDetail(num);
+    return result;
+  }
+  public void update1(ItemDTO itemDTO){
+    itemMapper.updateDetail(itemDTO);
+  }
+  public void deleteDetail(int num){
+    itemMapper.deleteDetail(num);
+  }
+  public void insertData(ItemDTO itemDTO){
+    itemMapper.insertData(itemDTO);
   }
 }
