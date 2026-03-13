@@ -1,0 +1,29 @@
+.container{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.carReg{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.header{
+  margin-left: 20px;
+  ;
+}
+.header > p{
+  font-weight: bold;
+  height: 0.5rem;
+}
+.inputer{
+  display: flex;
+  text-align: center;
+  gap: 50px;
+}
+.inputer > div{
+  display: flex;
+}
+.btn{
+  margin-left: 20px;
+}

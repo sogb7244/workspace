@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 해당 파일에 모든 쿼리문을 작성 -->
+<!-- namespace에는 xml파일과 연결할 Mapper interface 파일명을 패키지를 포함하여 적어주세요 -->
+<mapper namespace="com.example.restfulAPI_test.carSale.mapper.CarSaleMapper">
+    <resultMap id="carSale" type="com.example.restfulAPI_test.carSale.dto.CarSaleDTO">
+        <id property="salesNum"     column="SALES_NUM" />
+        <result property="buyerName"  column="BUYER_NAME" />
+        <result property="buyerPhone" column="BUYER_PHONE" />
+        <result property="color"      column="COLOR" />
+        <result property="saleDate"   column="SALE_DATE" />
+        <result property="modelNum"   column="MODEL_NUM" />
+    </resultMap>
+    <insert id="salesReg">
+        INSERT INTO SALES_INFO(
+            SALES_NUM
+        ,   BUYER_NAME
+        ,   BUYER_PHONE
+        ,   COLOR
+        ,   SALE_DATE
+        ,   MODEL_NUM
+        )VALUES(
+            #{salesNum}
+        ,   #{buyerName}
+        ,   #{buyerPhone}
+        ,   #{color}
+        ,   #{saleDate}
+        ,   #{modelNum}
+        )
+    </insert>
+
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

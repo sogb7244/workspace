@@ -10,6 +10,7 @@ import lombok.ToString;
 public class CarDTO {
   private int modelNum;
   private String modelName;
-  private  int price;
-  private  String brand;
+  private int price;
+  private String brand;
+  private int cateNum;
 }

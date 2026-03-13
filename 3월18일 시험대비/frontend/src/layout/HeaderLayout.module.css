@@ -1,11 +1,11 @@
+table{
+  width: 100%;
+}
 .homeList{
   display: flex;
   gap: 10px;
   background-color: black;
   color: white;
   padding: 10px;
-  border: 1px solid white;
-}
-.homeList > td{
-  
+  justify-content: space-evenly;
 }

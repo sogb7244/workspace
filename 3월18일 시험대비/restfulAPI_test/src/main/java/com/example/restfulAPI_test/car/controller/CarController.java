@@ -6,9 +6,9 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @Slf4j
 @RestController
@@ -20,11 +20,22 @@ public class CarController {
   @GetMapping("/list")
   public ResponseEntity<?> selectCar(){
     try {
-      CarDTO list = carService.selectCar();
+      List<CarDTO> list = carService.selectCar();
       return ResponseEntity.status(HttpStatus.OK).body(list);
     }catch (Exception e){
       log.error("자동차 관리화면 api 오류",e);
      return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
+    }
+  }
+
+  @PostMapping
+  public ResponseEntity<?> regCar(@RequestBody CarDTO carDTO){
+    try {
+      carService.insertCar(carDTO);
+      return ResponseEntity.status(HttpStatus.OK).build();
+    }catch (Exception e){
+      log.error("자동차 등록 api 오류",e);
+      return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
     }
   }
 }

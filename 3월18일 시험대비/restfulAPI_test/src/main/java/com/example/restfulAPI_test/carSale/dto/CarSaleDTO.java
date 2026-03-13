@@ -8,7 +8,7 @@ import org.springframework.format.annotation.DateTimeFormat;
 @Getter
 @Setter
 @ToString
-public class carSaleDTO {
+public class CarSaleDTO {
   private int salesNum;
   private String buyerName;
   private String buyerPhone;
