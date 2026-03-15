@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 해당 파일에 모든 쿼리문을 작성 -->
+<!-- namespace에는 xml파일과 연결할 Mapper interface 파일명을 패키지를 포함하여 적어주세요 -->
+<mapper namespace="com.example.restfulAPI_test.carSale.mapper.CarSaleMapper">
+    <resultMap id="carSale" type="com.example.restfulAPI_test.carSale.dto.CarSaleDTO">
+        <id property="salesNum"     column="SALES_NUM" />
+        <result property="buyerName"  column="BUYER_NAME" />
+        <result property="buyerTel" column="BUYER_TEL" />
+        <result property="color"      column="COLOR" />
+        <result property="saleDate"   column="SALES_DATE" />
+        <result property="modelNum"   column="MODEL_NUM" />
+        <association property="carData" resultMap="com.example.restfulAPI_test.car.mapper.CarMapper.car" />
+    </resultMap>
+
+    <resultMap id="color" type="com.example.restfulAPI_test.carSale.dto.ColorDTO">
+        <id property="color" column="COLOR" />
+    </resultMap>
+
+    <insert id="salesReg">
+        INSERT INTO SALES_INFO(
+            SALES_NUM
+        ,   BUYER_NAME
+        ,   BUYER_TEL
+        ,   COLOR
+        ,   MODEL_NUM
+        )VALUES(
+            #{salesNum}
+        ,   #{buyerName}
+        ,   #{buyerTel}
+        ,   #{color}
+        ,   #{modelNum}
+        )
+    </insert>
+    <select id="getColor" resultMap="color">
+        SELECT *
+        FROM COLOR_INFO
+    </select>
+    <select id="getSaleListInfo" resultType="map">
+        SELECT SALES_NUM
+        ,	BUYER_NAME
+        ,	BUYER_TEL
+        ,	SALES_DATE
+        ,	COLOR
+        ,   S.MODEL_NUM
+        ,	C.MODEL_NAME
+        ,	C.PRICE
+        FROM sales_info S INNER JOIN car_info C
+        ON S.MODEL_NUM = C.MODEL_NUM
+        ORDER BY SALES_DATE DESC
+    </select>
+
+
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

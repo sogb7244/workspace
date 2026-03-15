@@ -1,0 +1,49 @@
+.container {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #ffffff;
+  border: 1px solid #ffffff;
+  border-radius: 8px;
+}
+
+.container > div {
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.container p {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.input_modules {
+  display: flex;
+  gap: 20px; 
+  width: 100%;
+}
+.input_modules > div {
+  display: flex;
+  flex-direction: column;
+}
+.error_text {
+  color: #e74c3c;
+  font-size: 12px;
+  margin-top: 5px;
+  font-weight: 400;
+}
+
+.sale_btn_container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  width: 100%;
+}
+.sale_btn {
+  width: 150px;
+  height: 45px;
+  font-size: 16px;
+}

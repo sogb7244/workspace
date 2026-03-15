@@ -1,0 +1,94 @@
+# 단일행 서브쿼리가 아닌 경우(IN,ANY,ALL)
+
+# '과장' 직급을 가진 사원들이 속한 부서의 모든 사원의 사번, 사원명, 부서번호, 직급을 조회
+SELECT EMPNO, ENAME, DEPTNO, JOB
+FROM EMP
+WHERE DEPTNO IN (SELECT DISTINCT DEPTNO FROM EMP WHERE JOB = '과장');
+
+# 30번 부서에 속한 사원의 어느 한명보다도 급여를 더 많이 받는 사원의 사번, 사원명, 급여를 조회
+SELECT EMPNO,ENAME,SAL,DEPTNO
+FROM EMP
+WHERE SAL > (SELECT MIN(SAL) FROM EMP WHERE DEPTNO = 30);
+#WHERE SAL > ANY(SELECT SAL FROM EMP WHERE DEPTNO = 30);
+
+# 30번 부서에 속한 사원의 모두보다 급여를 더 많이 받는 사원의 사번, 사원명, 급여를 조회
+SELECT EMPNO,ENAME,SAL,DEPTNO
+FROM EMP
+WHERE SAL > ALL(SELECT SAL FROM EMP WHERE DEPTNO = 30);
+
+# 1. '한예슬' 사원보다 늦게 입사한 사원들의 이름과 입사일을 조회
+SELECT ENAME,HIREDATE
+FROM EMP
+WHERE HIREDATE > (SELECT HIREDATE FROM EMP WHERE ENAME = '한예슬');
+# 2. 직급이 '부장'인 사원들이 받는 급여 중 최소 급여보다 많이 받는 사원들의 이름,급여 조회
+SELECT ENAME,SAL
+FROM EMP
+WHERE SAL > ANY(SELECT SAL FROM EMP WHERE JOB = '부장');
+# 3. '인천'지역에 근무하는 사원들의 성명, 직급을 조회
+SELECT ENAME, JOB,(SELECT LOC FROM DEPT D WHERE D.DEPTNO = E.DEPTNO) LOC
+FROM EMP E
+WHERE DEPTNO IN(SELECT DEPTNO FROM DEPT  WHERE LOC = '인천');
+
+# 4. 직급이 '과장'인 사원들이 받는 모든 급여보다 적게 받는 직원들의 이름, 급여 조회
+SELECT ENAME,SAL
+FROM EMP
+WHERE SAL > ALL(SELECT SAL FROM EMP WHERE JOB = '과장');
+
+SELECT *
+FROM DEPT;
+SELECT *
+FROM EMP;
+
+-- 1. 회원 테이블
+CREATE TABLE SUB_MEMBER (
+    MEM_ID INT PRIMARY KEY,
+    MEM_NAME VARCHAR(20),
+    MEM_TYPE VARCHAR(10) -- 'VIP', '일반'
+);
+
+-- 2. 도서 테이블
+CREATE TABLE SUB_BOOK (
+    BOOK_ID INT PRIMARY KEY,
+    TITLE VARCHAR(50),
+    PRICE INT,
+    CATEGORY VARCHAR(20)
+);
+
+-- 3. 대여 기록 테이블
+CREATE TABLE SUB_RENTAL (
+    RENT_ID INT PRIMARY KEY,
+    MEM_ID INT,
+    BOOK_ID INT,
+    RENT_DATE DATE
+);
+-- 데이터 삽입
+INSERT INTO SUB_MEMBER VALUES (1, '유재석', 'VIP'), (2, '박명수', '일반'), (3, '노홍철', '일반'), (4, '정형돈', 'VIP');
+INSERT INTO SUB_BOOK VALUES (101, 'SQL 완성', 25000, 'IT'), (102, '자바 마스터', 30000, 'IT'), (103, '소설가 구보씨', 15000, '문학'), (104, '경제의 이해', 20000, '경제');
+INSERT INTO SUB_RENTAL VALUES (1, 1, 101, '2024-01-01'), (2, 1, 102, '2024-01-05'), (3, 2, 103, '2024-02-01'), (4, 3, 101, '2024-02-10');
+
+SELECT *
+FROM SUB_MEMBER;
+SELECT *
+FROM SUB_BOOK;
+SELECT *
+FROM SUB_RENTAL;
+#1. 대여 기록이 한 번이라도 있는 책의 제목을 조회하세요.
+SELECT TITLE
+FROM SUB_BOOK
+WHERE BOOK_ID IN (SELECT DISTINCT BOOK_ID FROM SUB_RENTAL);
+#2. 대여 기록이 한 번도 없는 책의 제목을 조회하세요.
+SELECT TITLE
+FROM SUB_BOOK
+WHERE BOOK_ID NOT IN (SELECT BOOK_ID FROM SUB_RENTAL);
+#3. 'IT' 카테고리에 속한 그 어떤 책보다도 가격이 비싼 도서의 제목과 가격을 조회하세요
+SELECT TITLE, PRICE
+FROM SUB_BOOK
+WHERE PRICE  > ALL(SELECT PRICE FROM SUB_BOOK WHERE CATEGORY = 'IT');
+#4. 'IT' 카테고리 도서 중 가장 저렴한 책보다만 비싸면 되는 도서의 제목과 가격을 조회하세요.
+SELECT TITLE,PRICE
+FROM SUB_BOOK
+WHERE PRICE > ANY(SELECT PRICE FROM SUB_BOOK WHERE CATEGORY = 'IT');
+
+
+
+

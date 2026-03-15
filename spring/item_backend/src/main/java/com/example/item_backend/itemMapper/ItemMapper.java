@@ -11,4 +11,5 @@ public interface ItemMapper {
   void updateDetail(ItemDTO itemDTO);
   void deleteDetail(int num);
   void insertData(ItemDTO itemDTO);
+
 }

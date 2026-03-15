@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 해당 파일에 모든 쿼리문을 작성 -->
+<!-- namespace에는 xml파일과 연결할 Mapper interface 파일명을 패키지를 포함하여 적어주세요 -->
+<mapper namespace="com.example.restfulAPI_test.car.mapper.CarMapper">
+    <resultMap id="car" type="com.example.restfulAPI_test.car.dto.CarDTO">
+        <id property="modelNum" column="MODEL_NUM" />
+        <result property="modelName" column="MODEL_NAME" />
+        <result property="price" column="PRICE" />
+        <result property="brand" column="BRAND" />
+    </resultMap>
+
+    <select id="selectCar" resultMap="car">
+        SELECT
+           MODEL_NUM
+        ,   MODEL_NAME
+        ,   PRICE
+        ,   BRAND
+        FROM CAR_INFO
+        ORDER BY MODEL_NUM DESC
+    </select>
+    <insert id="insertCar">
+        INSERT INTO CAR_INFO(
+            MODEL_NUM
+        ,   MODEL_NAME
+        ,   PRICE
+        ,   BRAND
+        ) VALUES (
+            #{modelNum}
+        ,   #{modelName}
+        ,   #{price}
+        ,   #{brand}
+        )
+    </insert>
+    <select id="getCarModelList" resultMap="car">
+        SELECT
+        MODEL_NUM,
+        MODEL_NAME
+        FROM CAR_INFO
+        ORDER BY MODEL_NUM ASC
+    </select>
+
+
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
