@@ -1,16 +1,11 @@
 import { FlatList, StyleSheet, Text, View } from 'react-native'
 import React, { useState } from 'react'
-import { dummyD_data } from '../data/dummy';
 import CartItem from './CartItem';
 import AntDesign from '@expo/vector-icons/AntDesign';
 
-const CartList = () => {
-  const [cartList, setCartList] = useState(dummyD_data);
+const CartList = ({cartList}) => {
   return (
     <View>
-      <Text>
-        To do List
-      </Text>
       <View style={styles.listContainer}>
         <FlatList
           //반복할 데이터
@@ -22,7 +17,6 @@ const CartList = () => {
           //반복적으로 그려지는 컴포넌트를 감싸는 전체 영역 디자인
           contentContainerStyle={{gap:10}}
           />
-
       </View>
     </View>
   )
