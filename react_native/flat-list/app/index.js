@@ -1,5 +1,5 @@
-import { Keyboard, StyleSheet, Text, TextInput, TouchableNativeFeedback, View } from 'react-native'
-import React, { useState } from 'react'
+import { useState } from 'react'
+import { Keyboard, StyleSheet, TextInput, TouchableNativeFeedback } from 'react-native'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import CartList from '../components/CartList'
 import { dummyD_data } from '../data/dummy'
@@ -17,12 +17,16 @@ const HomeScreen = () => {
       id : cartList.length === 0 ? 1 : Math.max(idList)+1 ,
       item : newItem
     }
+      
     
     //추가할 데이터를 cartList에 저장
     setCartList([...cartList,newData]);
     //TextInput 초기화
     setNewItem('');
   }
+   const deldata = ((id) => {
+      setCartList(prev => prev.filter(item => item.id !== id));
+    })
 
   return (
     // 빈 곳 터치 시 키보드 숨김 기능
@@ -37,7 +41,7 @@ const HomeScreen = () => {
         //입력한 데이터를 cartList에 추가
         onSubmitEditing={() => addCart()}
         />
-        <CartList cartList={cartList}/>
+        <CartList cartList={cartList} onkk={deldata}/>
       </SafeAreaView>
     </TouchableNativeFeedback>
   )
@@ -48,6 +52,7 @@ export default HomeScreen
 const styles = StyleSheet.create({
   container: {
     flex : 1,
+    backgroundColor:'white'
   },  
   input : {
     borderWidth : 1

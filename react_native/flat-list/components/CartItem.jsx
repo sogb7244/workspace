@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { Pressable, StyleSheet, Text, TextInput, View } from 'react-native';
 import { dummyD_data } from '../data/dummy';
 
-const CartItem = ({item}) => {
+const CartItem = ({item,ondo}) => {
   //현재 수정중인지 상태를 파악하기 위한 state 변수
   const [isEditing,setIsediting] = useState(false);
   //리스트
@@ -18,14 +18,9 @@ const CartItem = ({item}) => {
         : cartItem
     );
     setCartList(updatedList);
-    setIsediting(false); 
+    setIsediting(false);  
   };
-  //해당 리스트 삭제 함수
-   const deldata = (id) => {
-    const deleteData = cartList.filter(cartItem => cartItem.id !== id);
-    setCartList(deleteData);
-  };
-
+ 
   
 
   console.log(inputData);
@@ -72,7 +67,7 @@ const CartItem = ({item}) => {
           </Pressable>
           <Pressable
             onPress={() =>{
-              deldata(item.id)
+              ondo(item.id)
             }}
             style={styles.itemContainer}>
             <AntDesign 
