@@ -103,7 +103,7 @@ const SellInfoReg = () => {
           onChange={e => {
             handleCarSales(e)
           }}/>
-        <p className={styles.error_text} style={{visibility: blankerrors.buyerName ? 'visible' : 'hidden'}}>
+        <p className={`${styles.error_text} ${blankerrors.buyerName ? '' : styles.error_hidden}`}>
           {blankerrors.buyerName || '빈칸'}
         </p>
       </div>
@@ -128,7 +128,7 @@ const SellInfoReg = () => {
               })
             }
           </Select>
-          <p className={styles.error_text} style={{visibility: blankerrors.color ? 'visible' : 'hidden'}}>
+          <p className={`${styles.error_text} ${blankerrors.color ? '' : styles.error_hidden}`}>
             {blankerrors.color || '빈칸'}
           </p>
         </div>
@@ -153,7 +153,7 @@ const SellInfoReg = () => {
                 }) 
               }
           </Select>
-          <p className={styles.error_text} style={{visibility: blankerrors.carModel ? 'visible' : 'hidden'}}>
+          <p className={`${styles.error_text} ${blankerrors.carModel ? '' : styles.error_hidden}`}>
             {blankerrors.carModel || '빈칸'}
           </p>
         </div>
@@ -166,7 +166,7 @@ const SellInfoReg = () => {
           onChange={e => {
             handleCarSales(e)
           }}/>
-          <p className={styles.error_text} style={{visibility: blankerrors.phoneNum ? 'visible' : 'hidden'}}>
+          <p className={`${styles.error_text} ${blankerrors.phoneNum ? '' : styles.error_hidden}`}>
             {blankerrors.phoneNum || '빈칸'}
           </p>
       </div>

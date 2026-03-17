@@ -36,6 +36,10 @@
   font-weight: 400;
 }
 
+.error_hidden {
+  visibility: hidden;
+}
+
 .sale_btn_container {
   display: flex;
   justify-content: center;
