@@ -26,7 +26,15 @@
 
 .inputer > div {
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
+}
+
+.select_width {
+  width: 200px;
+}
+
+.input_width {
+  width: 300px;
 }
 
 .inputer p {
@@ -36,7 +44,7 @@
   color: #333;
 }
 
-.error_text {
+.inputer p.error_text {
   color: #e74c3c;
   font-size: 12px;
   margin-top: 5px;

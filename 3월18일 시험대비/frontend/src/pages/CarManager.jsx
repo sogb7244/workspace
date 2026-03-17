@@ -109,7 +109,7 @@ const CarManager = () => {
                 onChange={e => {
                   handleRegCars(e)
                 }}
-                style={{width: '200px'}}>
+                className={styles.select_width}>
                 <option value='0'>선택</option> 
                 {
                   cate.map((cates,i) => {
@@ -126,7 +126,7 @@ const CarManager = () => {
             <div>
               <p>모델명</p>
               <Input
-                style={{width: '300px'}}
+                className={styles.input_width}
                 type='text'
                 name='modelName'
                 value={regCars.modelName}
@@ -145,7 +145,7 @@ const CarManager = () => {
                 onChange={e=>{
                   handleRegCars(e)
                 }}
-                style={{width: '300px'}}>
+                className={styles.input_width}>
               </Input>
               <p className={`${styles.error_text} ${blacnkError.price ? '' : styles.error_hidden}`}>{blacnkError.price || '빈칸'}</p>
             </div>
