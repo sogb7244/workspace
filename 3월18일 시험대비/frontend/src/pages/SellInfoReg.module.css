@@ -29,11 +29,11 @@
   display: flex;
   flex-direction: column;
 }
-.container p.error_text {
-  color: #e74c3c;
-  font-size: 12px;
+.error_text {
+  color: #e74c3c !important;
+  font-size: 12px !important;
   margin-top: 5px;
-  font-weight: 400;
+  font-weight: 400 !important;
 }
 
 .error_hidden {
