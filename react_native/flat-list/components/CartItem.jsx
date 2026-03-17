@@ -21,8 +21,6 @@ const CartItem = ({item,ondo}) => {
     setIsediting(false);  
   };
  
-  
-
   console.log(inputData);
   return (
     <View style={styles.container}>

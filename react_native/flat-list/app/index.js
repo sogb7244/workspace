@@ -14,7 +14,7 @@ const HomeScreen = () => {
     //Math.max([1,2,3]) => 3
     const idList = cartList.map((item,i) => item.id)
     const newData = {
-      id : cartList.length === 0 ? 1 : Math.max(idList)+1 ,
+      id : (cartList.length === 0 ? 1 : Math.max(...idList)+1) ,
       item : newItem
     }
       

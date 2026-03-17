@@ -1,0 +1,15 @@
+https://orangecake.tistory.com/37
+
+{
+  "mcpServers": {
+    "notionApi": {
+      "command": "npx",
+      "args": ["-y", "@notionhq/notion-mcp-server"],
+      "env": {
+        "NOTION_TOKEN": "ntn_****"
+      }
+    }
+  }
+}
+
+https://orangecake.tistory.com/37/
