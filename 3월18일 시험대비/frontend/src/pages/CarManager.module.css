@@ -36,6 +36,17 @@
   color: #333;
 }
 
+.error_text {
+  color: #e74c3c;
+  font-size: 12px;
+  margin-top: 5px;
+  font-weight: 400;
+}
+
+.error_hidden {
+  visibility: hidden;
+}
+
 
 .btn {
   display: flex;

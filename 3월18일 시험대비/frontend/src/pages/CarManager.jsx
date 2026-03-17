@@ -121,7 +121,7 @@ const CarManager = () => {
                   })
                 }
               </Select>
-              <p style={{color:'#e74c3c', fontSize:'12px', marginTop:'5px', fontWeight:400, visibility: blacnkError.brand ? 'visible' : 'hidden'}}>{blacnkError.brand || '빈칸'}</p>
+              <p className={`${styles.error_text} ${blacnkError.brand ? '' : styles.error_hidden}`}>{blacnkError.brand || '빈칸'}</p>
             </div>
             <div>
               <p>모델명</p>
@@ -134,7 +134,7 @@ const CarManager = () => {
                   handleRegCars(e)
                 }}>
               </Input>
-              <p style={{color:'#e74c3c', fontSize:'12px', marginTop:'5px', fontWeight:400, visibility: blacnkError.modelName ? 'visible' : 'hidden'}}>{blacnkError.modelName || '빈칸'}</p>
+              <p className={`${styles.error_text} ${blacnkError.modelName ? '' : styles.error_hidden}`}>{blacnkError.modelName || '빈칸'}</p>
             </div>
             <div>
               <p>차량가격</p>
@@ -147,7 +147,7 @@ const CarManager = () => {
                 }}
                 style={{width: '300px'}}>
               </Input>
-              <p style={{color:'#e74c3c', fontSize:'12px', marginTop:'5px', fontWeight:400, visibility: blacnkError.price ? 'visible' : 'hidden'}}>{blacnkError.price || '빈칸'}</p>
+              <p className={`${styles.error_text} ${blacnkError.price ? '' : styles.error_hidden}`}>{blacnkError.price || '빈칸'}</p>
             </div>
           </div>
         </div>
